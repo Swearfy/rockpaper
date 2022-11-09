@@ -38,7 +38,7 @@ function game() {
     let outcome = playRound(playerSelection, computerSelection);
 
     console.log(outcome);
-    //infinite loop
+    //infinite loop over best of 5
     // if (playerScore <= 4 && computerScore <= 4) {
     //   loop++;
     // }
