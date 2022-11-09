@@ -1,4 +1,4 @@
-const a = ["Rock", "Paper", "Scissors"];
+const a = ["rock", "paper", "scissors"];
 
 let playerScore = 0;
 let computerScore = 0;
@@ -10,17 +10,17 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   if (
-    (playerSelection == "Rock" && computerSelection == "Paper") ||
-    (playerSelection == "Paper" && computerSelection == "Scissors") ||
-    (playerSelection == "Scissors" && computerSelection == "Rock")
+    (playerSelection == "rock" && computerSelection == "paper") ||
+    (playerSelection == "paper" && computerSelection == "scissors") ||
+    (playerSelection == "scissors" && computerSelection == "rock")
   ) {
     computerScore++;
     return "Player loses round";
   }
   if (
-    (playerSelection == "Paper" && computerSelection == "Rock") ||
-    (playerSelection == "Scissors" && computerSelection == "Paper") ||
-    (playerSelection == "Rock" && computerSelection == "Scissors")
+    (playerSelection == "paper" && computerSelection == "rock") ||
+    (playerSelection == "scissors" && computerSelection == "paper") ||
+    (playerSelection == "rock" && computerSelection == "scissors")
   ) {
     playerScore++;
     return "Player wins round";
@@ -35,7 +35,7 @@ function game() {
   for (let i = 0; i < loop; i++) {
     let computerSelection = getComputerChoice();
     let playerSelection = window.prompt("Rock,Paper or Scissors");
-    let outcome = playRound(playerSelection, computerSelection);
+    let outcome = playRound(playerSelection.toLowerCase(), computerSelection);
 
     console.log(outcome);
     //infinite loop over best of 5
